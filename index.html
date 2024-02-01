@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Frutiger', Arial, sans-serif;
+    }
+
+    header {
+      background-color: #DE3E1A;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .slideshow-container {
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+    }
+
+    .mySlides img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+  .text-container {
+      text-align: center;
+      margin: 20px 0;
+      color: #333; /* Adjust text color as needed */
+    }
+
+    .text-container h3 {
+      font-size: 24px; /* Adjust the font size as needed */
+      font-family: 'Frutiger', Arial, sans-serif;
+      color : #DE3E1A
+    }
+
+    .text-container p {
+      font-size: 18px; /* Adjust the font size as needed */
+      font-family: 'Frutiger', Arial, sans-serif;
+    }
+    .footer {
+      background-color: #DE3E1A;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer h6 {
+      margin: 0;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 20px 40px;
+      margin: 10px;
+      background-color: #fff;
+      color: #DE3E1A;
+      border: 2px solid #DE3E1A;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.5s, color 0.5s;
+      text-decoration: none;
+      text-align: center;
+      width: 40%;
+    }
+
+    .button:hover {
+      background-color: #DE3E1A;
+      color: #fff;
+    }
+
+    .social-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      padding-top: 10%;
+    }
+
+    .social-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  <title>Your Website</title>
+</head>
+<body>
+
+  <header>
+    <h1>GTConsultant</h1>
+  </header>
+
+  <!-- Banner Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="https://i.imgur.com/zFye8Xg.jpeg" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/qfvCfgV.jpeg" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/9qfidF2.jpeg" alt="Image 3">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/tMu63VA.jpeg" alt="Image 4">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/PG8Bnfy.jpeg" alt="Image 5">
+    </div>
+  </div>
+
+  <!-- Text Container -->
+  <div class="text-container">
+    <h3>PERSONALIZED GUIDANCE</h3>
+    <p>Seeking advice on investments, loanss, or a better understanding of the financial landscape? 
+      Our team of professionals is here to share their expertise. Your questions, our solutions – personalized just for you.</p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="button-container">
+    <div class="button" onclick="openTypeform('https://sjyf02qvxzh.typeform.com/to/m4lCmi7X')">Personal Banking</div>
+    <div class="button" onclick="openTypeform('https://sjyf02qvxzh.typeform.com/to/m4lCmi7X')">Retail Banking</div>
+    <div class="button" onclick="openTypeform('https://sjyf02qvxzh.typeform.com/to/m4lCmi7X')">SME Banking</div>
+    <div class="button" onclick="openTypeform('https://sjyf02qvxzh.typeform.com/to/m4lCmi7X')">Commercial Banking</div>
+  </div>
+
+
+  <script>
+    function openTypeform(link) {
+      window.open(link, '_blank');
+    }
+  </script>
+
+  <script>
+    let slideIndex = 0;
+
+    function showSlides() {
+      const slides = document.querySelectorAll('.mySlides');
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].style.display = 'block';
+      setTimeout(showSlides, 2000);
+    }
+
+    // Initialize slideshow when the page loads
+    window.onload = function () {
+      showSlides();
+    };
+  </script>
+
+</body>
+</html>
